@@ -12,6 +12,7 @@
 <script src="{{ asset('js/jquery.flexisel.js') }}" defer></script>
 <script src="{{ asset('js/responsiveslides.min.js') }}" defer></script>
 <script src="{{ asset('js/jquery.magnific-popup.js') }}" ></script>
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
 
 <!-- Fonts -->
 

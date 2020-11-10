@@ -1,33 +1,42 @@
 <div class="header">
 		<div class="header-left">
-					<div class="logo" style="margin-left: 20px">
-						<a href="">
-							<strong><h1>Giao Thông <span>VIỆT NAM</span></h1></strong>
-						</a>
+					<div class="logo" style="margin-left: 30px; font-size: 18px">
+							<a href="">
+									<strong><h1>Giao Thông <span>VIỆT NAM</span></h1></strong>
+							</a>
 					</div>
 		</div>
 		<div class="clearfix"></div>
 		<div class="header-right">
-			<div class="top-menu" style="margin-left: 100px">
-				<ul>
-                    |<li><a id="modal_trigger" href="/WebGiaoThong/public/login" class="btn1">Đăng Nhập</a></li> |
-                    <li><a id="modal_trigger" href="/WebGiaoThong/public/register" class="btn1">Đăng Ký</a></li> |
-				</ul>
-            </div>
+			<div class="top-menu" style="margin-left: 350px; font-size: 16px">
+					<ul>
+						@guest
+              <li>
+								<a id="modal_trigger" href="{{ route('login') }}" class="btn1">Đăng Nhập</a>
+							</li> |
+							@if (Route::has('register'))
+									<li><a id="modal_trigger" href="{{ route('register') }}" class="btn1">Đăng Ký</a></li>
+							@endif
+						@else
+								<li class="nav-item dropdown">
+										<a id="modal_trigger" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
+												Chào,  <a style="color: blue; text-transform: uppercase; ">{{ Auth::user()->name }}</a>
+										</a>
+								</li> |
 
-            <div>
-                <label style="margin-left: 70px; margin-top: 5px">
-                    <i><u>Search:</u></i>
-                </label>
-			    <div class="search">
-                    <form>
-					    <input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}"  />
-					    <input type="submit" value="">
-				    </form>
-			    </div>
-                <div class="clearfix"></div>
-            </div>
+								<li>
+										<a id="modal_trigger" href="{{ route('logout') }}" onclick="event.preventDefault();
+																				 document.getElementById('logout-form').submit();">
+														{{ __('Đăng xuất') }}
+										</a>
+
+										<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+												@csrf
+										</form>
+								</li>
+						@endguest
+					</ul>
+      </div>
 		</div>
 		<div class="clearfix"></div>
 </div>
-

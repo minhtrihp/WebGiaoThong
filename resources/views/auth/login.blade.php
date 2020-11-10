@@ -43,7 +43,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row" style="margin-bottom: 50px">
+                        <div class="form-group row" style="margin-bottom: 50px; margin-left: 100px">
                             <div class="col-md-6 offset-md-4" >
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -53,12 +53,6 @@
                                     </label>
                                 </div>
                             </div>
-
-                            @if (Route::has('password.request'))
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    <u><strong>{{ __('Forgot Your Password?') }}</strong></u>
-                                </a>
-                            @endif
                         </div>
 
                         <div class="form-group row mb-0" style="margin-bottom: 40px">

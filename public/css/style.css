@@ -67,15 +67,15 @@ label{
 }
 .logo a h6 {
 	color:#191919;
-	font-family: 'georgia';
+	font-family: Times New Roman;
 	font-weight:500;
 	font-size:1.1em;
 }
 .logo a h1 {
 	color:#191919;
-	font-family: 'georgia';
-	font-weight:500;
-	font-size:2.2em;
+	font-family: Times New Roman;
+	font-weight:bolder;
+	font-size:2.5em;
 }
 .logo {
 	margin-top: 10px;
@@ -246,9 +246,9 @@ a.btn {color:#666; text-align: center; text-decoration: none;}
 	color: #fff;
 	font-size: 1.1em;
 	font-weight: 400;
-	font-family: 'bebasregular';
+	font-family: Arial;
 	text-decoration: none;
-	padding: 1.1em 1.5533555em 0.9em;
+	padding: 1em 1.5533555em 0.9em;
 }
 .menu-strip ul li:last-child {
 	text-align: right;
@@ -1300,6 +1300,7 @@ img.blog {
 	color:#EA5546;
 	font-size:0.8em;
 	margin-left:10px;
+	text-decoration: none;
 }
 .grid-header ul li{
 	display: inline-block;
@@ -1416,7 +1417,7 @@ img.blog {
 	margin-bottom:3em;
 }
 span {
-	color: #cf0000;
+	color: black;
 }
 .l_g_r {
 	margin-left: 3em;
